@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0d12;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* LOGIN */
+
+#loginScreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 420px;
+  background: #151820;
+  border: 1px solid #292e3a;
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 50px;
+}
+
+.loginBox h1 {
+  margin-bottom: 5px;
+}
+
+.loginBox p {
+  color: #9298a7;
+}
+
+.loginBox input {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* HEADER */
+
+header {
+  background: #11141b;
+  border-bottom: 1px solid #252936;
+  padding: 22px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  color: #9298a7;
+  margin-bottom: 0;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* MAIN */
+
+main {
+  width: 92%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.card {
+  background: #151820;
+  border: 1px solid #252936;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.muted {
+  color: #9298a7;
+}
+
+/* INPUTS */
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  border-radius: 9px;
+  border: 1px solid #303541;
+  background: #0d1016;
+  color: white;
+  outline: none;
+}
+
+input:focus {
+  border-color: #5865f2;
+}
+
+/* BUTTONS */
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 16px;
+  margin-top: 12px;
+  background: #303541;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.primary {
+  width: 100%;
+  background: #5865f2;
+}
+
+.projectTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  margin-top: 0;
+}
+
+#projectStatus {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: #252a35;
+  color: #cbd0dc;
+}
+
+/* ENV */
+
+.envForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+}
+
+.envForm input {
+  margin-top: 0;
+}
+
+.envForm button {
+  margin-top: 0;
+}
+
+.envItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d1016;
+  border-radius: 9px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.envName {
+  font-family: monospace;
+}
+
+.deleteEnv {
+  background: #8b3030;
+}
+
+/* LOGS */
+
+.logsTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logs {
+  background: #080a0e;
+  border-radius: 10px;
+  padding: 18px;
+  min-height: 280px;
+  max-height: 500px;
+  overflow: auto;
+  white-space: pre-wrap;
+  color: #cfd3dc;
+  font-family: monospace;
+}
+
+#deployMessage,
+#loginMessage {
+  margin-top: 15px;
+  color: #c8ceda;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projectTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .buttons button {
+    flex: 1;
+  }
+
+  .envForm {
+    grid-template-columns: 1fr;
+  }
+
+}
