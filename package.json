@@ -1,0 +1,14 @@
+{
+  "name": "mini-render",
+  "version": "1.0.0",
+  "description": "Mini Render privado",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}
