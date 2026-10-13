@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Mini Render</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+  <div id="loginScreen">
+
+    <div class="loginBox">
+
+      <div class="logo">
+        🚀
+      </div>
+
+      <h1>Mini Render</h1>
+
+      <p>
+        Panel privado
+      </p>
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Introduce tu clave"
+        autocomplete="off"
+      >
+
+      <button onclick="login()">
+        🔐 Entrar
+      </button>
+
+      <div id="loginMessage"></div>
+
+    </div>
+
+  </div>
+
+
+  <div id="app" class="hidden">
+
+    <header>
+
+      <div>
+
+        <h1>
+          🚀 Mini Render
+        </h1>
+
+        <p>
+          Tu plataforma privada de Deploy
+        </p>
+
+      </div>
+
+      <div class="headerButtons">
+
+        <span id="globalStatus">
+          ⚪ Offline
+        </span>
+
+        <button onclick="logout()">
+          Salir
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <main>
+
+      <section class="card">
+
+        <h2>
+          Nuevo Deploy
+        </h2>
+
+        <p class="muted">
+          Sube un ZIP con tu proyecto Node.js.
+        </p>
+
+        <input
+          id="projectName"
+          type="text"
+          placeholder="Nombre del proyecto"
+        >
+
+        <input
+          id="projectFile"
+          type="file"
+          accept=".zip"
+        >
+
+        <button
+          onclick="deploy()"
+          class="primary"
+        >
+          🚀 Deploy
+        </button>
+
+        <div id="deployMessage"></div>
+
+      </section>
+
+
+      <section class="card">
+
+        <div class="projectTop">
+
+          <div>
+
+            <h2 id="projectTitle">
+              Sin proyecto
+            </h2>
+
+            <span id="projectStatus">
+              Offline
+            </span>
+
+          </div>
+
+          <div class="buttons">
+
+            <button
+              onclick="startProject()"
+            >
+              ▶️ Start
+            </button>
+
+            <button
+              onclick="stopProject()"
+            >
+              ⏹️ Stop
+            </button>
+
+            <button
+              onclick="restartProject()"
+            >
+              🔄 Restart
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section class="card">
+
+        <h2>
+          🔑 Environment Variables
+        </h2>
+
+        <div class="envForm">
+
+          <input
+            id="envKey"
+            type="text"
+            placeholder="DISCORD_TOKEN"
+          >
+
+          <input
+            id="envValue"
+            type="password"
+            placeholder="Valor"
+          >
+
+          <button
+            onclick="saveEnv()"
+          >
+            Guardar
+          </button>
+
+        </div>
+
+        <div id="envList"></div>
+
+      </section>
+
+
+      <section class="card">
+
+        <div class="logsTop">
+
+          <h2>
+            📜 Logs
+          </h2>
+
+          <button
+            onclick="clearLogs()"
+          >
+            🗑️ Limpiar
+          </button>
+
+        </div>
+
+        <pre id="logs">No hay logs.</pre>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
